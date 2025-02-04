@@ -1,0 +1,51 @@
+5. TableLayout
+Explanation:
+
+Organizes views in rows and columns, similar to an HTML table.
+Uses <TableRow> for defining rows.
+XML Example:
+xml
+Copy
+Edit
+
+  
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:text="Name"
+            android:padding="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="Age"
+            android:padding="8dp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="John Doe"
+            android:padding="8dp" />
+
+        <TextView
+            android:text="25"
+            android:padding="8dp" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Jane Smith"
+            android:padding="8dp" />
+
+        <TextView
+            android:text="30"
+            android:padding="8dp" />
+    </TableRow>
+
+</TableLayout>
