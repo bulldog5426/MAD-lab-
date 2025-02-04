@@ -1,0 +1,135 @@
+
+Here are example XML codes for each layout type in Android Studio, along with explanations:
+
+1. LinearLayout
+Explanation:
+
+Arranges views in a single direction: vertically or horizontally.
+Uses the android:orientation attribute to define the direction.
+Each child view is placed one after another.
+XML Example:
+xml
+Copy
+Edit
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linear Layout Example"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me" />
+
+</LinearLayout>
+2. RelativeLayout
+Explanation:
+
+Child views are positioned relative to each other or the parent container.
+Uses android:layout_below, android:layout_toRightOf, android:alignParentTop, etc.
+XML Example:
+xml
+Copy
+Edit
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout Example"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
+3. ConstraintLayout
+Explanation:
+
+Flexible and recommended layout for Android development.
+Uses constraints to define positions of child views.
+Avoids deep nested layouts for better performance.
+XML Example:
+xml
+Copy
+Edit
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constraint Layout Example"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+4. FrameLayout
+Explanation:
+
+A simple layout that stacks child views on top of each other.
+Used for overlapping views, such as a custom loader or a fragment container.
+XML Example:
+xml
+Copy
+Edit
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frame Layout Example"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center" />
+
+</FrameLayout>
